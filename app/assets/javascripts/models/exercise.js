@@ -2,7 +2,6 @@ console.log("models/exercise.js connected");
 
 var Exercise = Backbone.Model.extend({
   defaults: {
-    id: 0,
     ex_name: '',
     two_sides: false,
     reps: 0,
@@ -13,7 +12,7 @@ var Exercise = Backbone.Model.extend({
 });
 
 var ExerciseCollection = Backbone.Collection.extend({
-  url: 'users/:id/exercises',
+  url: window.location.pathname + '/exercises',
   model: Exercise
 });
 

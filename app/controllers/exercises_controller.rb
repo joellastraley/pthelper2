@@ -23,7 +23,7 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = Exercise.new(exercise_params)
-
+binding.pry
     if @exercise.save
       render json: @exercise
     else
@@ -54,7 +54,7 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require(:exercise).permit(:ex_name, :two_sides?, :reps, :img_url, :time_hold)
+    params.require(:exercise).permit(:ex_name, :two_sides?, :reps, :img_url, :holdtime, :user_id)
   end
 
 end
