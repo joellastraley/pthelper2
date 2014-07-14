@@ -1,7 +1,8 @@
 class ExercisesController < ApplicationController
 
   def index
-    @exercises = Exercises.all
+    @exercises = current_user.exercises
+    @name = current_user.user_name
 
     if @exercises
       render json: @exercises

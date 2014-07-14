@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_serialize_object
+//= require underscore
+//= require backbone
+//= require ./models/exercise.js
+//= require ./views/exercise.js
+//= require main.js
 //= require turbolinks
 //= require_tree .

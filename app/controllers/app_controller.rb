@@ -1,5 +1,9 @@
-class Workout < ActiveRecord::Base
-  has_many :exercises
-  belongs_to :user
+class AppController < ApplicationController
+
+  def index
+  end
+
+  def templates
+  end
 
 end
