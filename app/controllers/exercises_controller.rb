@@ -23,7 +23,7 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = Exercise.new(exercise_params)
-binding.pry
+
     if @exercise.save
       render json: @exercise
     else

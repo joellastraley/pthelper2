@@ -1,27 +1,21 @@
-
-
-<% if signed_in? %>
-  <h1>Welcome To PT Helper</h1>
-  <div class="nav">
+<h1>Welcome To PT Helper</h1>
+  <div class="nav" id="nav">
     <ul>
-      <li>Add New Exercise</li>
-      <li id>See My Exercises</li>
-      <li>Create Workout</li>
-      <li>View Past Activity</li>
+      <li><a href="#new-exercise">Add New Exercise</a></li>
+      <li><a href="#exercise-list">My Exercises</a></li>
+      <li><a href="#">View Past Activity [TK]</a></li>
     </ul>
   </div>
-<% else %>
-  <h1>Sign in to PT Helper</h1>
-<% end %>
 
-<ul id="exercise-list"></ul>
+<ul class="view" id="exercise-list"></ul>
 <script type="template" id="exercise-list-template">
     <%% exerciseCollection.each(function(exercise) { %>
       <li><%%= exercise.get('ex_name') %></li>
+      <a href="#<%%=window.location.pathname%>/exercises/<%%= exercise.get('id')%>">Start Timer!</a>
     <%% }) %>
 </script>
 
-<form id="new-exercise"></form>
+<form class="view" id="new-exercise"></form>
 <script type="template" id="new-exercise-template">
   <fieldset>
     <legend>Enter New Exercise</legend>
@@ -39,3 +33,10 @@
     <input type="submit" value="Submit">
   </fieldset>
 </script>
+
+<div class="view" id="workout-timer"></div>
+<script type="template" id="workout-timer-template">
+  <p>This one is called: <%%= model.get('ex_name') %></p>
+</script>
+
+

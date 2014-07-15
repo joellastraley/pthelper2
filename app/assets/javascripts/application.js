@@ -17,6 +17,7 @@
 //= require backbone
 //= require ./models/exercise.js
 //= require ./views/exercise.js
+//= require ./models/workout.js
+//= require ./views/workout.js
 //= require main.js
-//= require turbolinks
 //= require_tree .

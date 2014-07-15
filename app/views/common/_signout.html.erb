@@ -1,10 +1,10 @@
 <% if signed_in? %>
 
   <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    View <%= link_to current_user.user_name, current_user %>'s account
+    See the account of <%= link_to current_user.user_name, current_user %>
     <%= f.submit "Sign out", id: 'signout' %>
   <% end %>
-  <p><%= link_to "Edit Account", edit_user_path(@user) %></p>
+
 
 <% else %>
 

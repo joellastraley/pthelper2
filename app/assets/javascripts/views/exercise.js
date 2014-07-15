@@ -14,6 +14,14 @@ var ExerciseListView = Backbone.View.extend({
     var rendered = this.template({ exerciseCollection: this.collection });
     this.$el.html('Here are your assigned exercises:' + rendered);
   }
+
+  // events: {
+  //   "submit": "startTimer"
+  // },
+
+
+
+
 });
 
 var FormView = Backbone.View.extend({
@@ -42,6 +50,7 @@ var FormView = Backbone.View.extend({
     var holdtime = this.$('[name="holdtime"]').val();
     var user_id = this.$('[name="user_id"]').val();
     this.el.reset();
+    //alert(ex_name 'added!');
 
     this.collection.create({
       ex_name: ex_name,
