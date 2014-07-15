@@ -1,27 +1,28 @@
 console.log("main.js connected");
 
+// $(document).ready(function(){
 
-var exerciseCollection = new ExerciseCollection();
-exerciseCollection.fetch().then(function(){
-  exerciseCollection.each(function(exercise){
-    console.log( exercise.get('ex_name'));
+  exerciseCollection = new ExerciseCollection();
+  exerciseCollection.fetch().then(function(){
+    var pTHelperRouter = new PTHelperRouter();
+    Backbone.history.start();
   });
-});
 
-var workoutCollection = new WorkoutCollection();
-workoutCollection.fetch().then(function(){
-  workoutCollection.each(function(exercise){
-    console.log(exercise.get('ex_name'));
+  var workoutCollection = new WorkoutCollection();
+  workoutCollection.fetch().then(function(){
+    workoutCollection.each(function(exercise){
+      console.log(exercise.get('ex_name'));
+    });
   });
-});
 
-var exerciseListView = new ExerciseListView({ collection: exerciseCollection });
-  exerciseListView.$el.appendTo("#exercise-list");
+  var exerciseListView = new ExerciseListView({ collection: exerciseCollection });
+    exerciseListView.$el.appendTo("#exercise-list");
 
-var formView = new FormView({collection: exerciseCollection});
-  formView.$el.appendTo("#new-exercise");
+  var formView = new FormView({collection: exerciseCollection});
+    formView.$el.appendTo("#new-exercise");
+// });
 
-var workoutTimerView = new WorkoutTimerView({ model: this.model });
-  workoutTimerView.$el.appendTo("#workout-timer");
+
+
 
 

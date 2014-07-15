@@ -15,13 +15,6 @@ var ExerciseListView = Backbone.View.extend({
     this.$el.html('Here are your assigned exercises:' + rendered);
   }
 
-  // events: {
-  //   "submit": "startTimer"
-  // },
-
-
-
-
 });
 
 var FormView = Backbone.View.extend({
@@ -43,14 +36,13 @@ var FormView = Backbone.View.extend({
 
   addExercise: function(evt){
     evt.preventDefault();
+    var two_sides = $('[name="two_sides"]').is(":checked");
     var ex_name = this.$('[name="ex_name"]').val();
-    var two_sides = this.$('[name="two_sides"]').val();
     var reps = this.$('[name="reps"]').val();
     var img_url = this.$('[name="img_url"]').val();
     var holdtime = this.$('[name="holdtime"]').val();
     var user_id = this.$('[name="user_id"]').val();
     this.el.reset();
-    //alert(ex_name 'added!');
 
     this.collection.create({
       ex_name: ex_name,

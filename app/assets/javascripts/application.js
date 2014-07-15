@@ -19,5 +19,5 @@
 //= require ./views/exercise.js
 //= require ./models/workout.js
 //= require ./views/workout.js
+//= require ./routers/routes.js
 //= require main.js
-//= require_tree .
