@@ -5,7 +5,7 @@ class CreateExercises < ActiveRecord::Migration
       t.string :ex_name
       t.boolean :two_sides?
       t.integer :reps
-      t.time :time_to_hold
+      t.integer :holdtime
       t.string :img_url
       t.references :user
     end

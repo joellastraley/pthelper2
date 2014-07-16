@@ -51,3 +51,5 @@ group :development, :test do
   gem 'simplecov', '~> 0.7.1'
   gem 'rails-erd'
 end
+
+ruby "2.1.1"
