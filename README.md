@@ -1,0 +1,43 @@
+#PT Helper#
+
+##GA WDI DC April 2014, Project 3##
+
+##Overview##
+
+**PT Helper** assists physical therapy patients in tracking exercises assigned to them by their therapists.  The app creates a custom timer for each assigned exercise based off the details entered by a patient.  Once the timer finishes running through a cycle, it log the exercise as having been completed.  This information can be shared with a doctor or therapist to help monitor progress and compliance.
+
+See it live here: http://intense-sands-7651.herokuapp.com/
+
+##Technologies Used##
+
+-Backbone
+-Ruby 2.1.1
+-Ruby on Rails 4.1.1
+-PostgreSQL Database
+-Authentication & Authorization from scratch using bcrypt-ruby
+
+##User Stories Completed##
+
+-User can create account
+-User can see a list of all assigned exercises
+-User can enter custom exercise instructions in account
+-User can pick a roster of exercises for today
+-Timer displays details of each exercise (timer function TK)
+
+##Backlog##
+
+Features on the horizon include:
+-Functional timer
+-Exercise logger
+-Calendar view for completed exercises
+-Image upload for demo pic
+
+
+A full list of user stories can be found at this [Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1119556)
+
+##ERD##
+
+PT Helper domain model
+
+![ERD](http://www.gliffy.com/go/publish/image/5948726/L.png)
+
