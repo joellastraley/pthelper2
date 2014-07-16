@@ -1,54 +1,56 @@
-<h1>Welcome To PT Helper</h1>
-  <div class="nav" id="nav">
+<div class="container">
+  <h1>PT Helper</h1>
+    <div class="nav" id="nav">
+      <ul>
+        <li><a href="#new-exercise">Add New Exercise</a></li>
+        <li><a href="#exercise-list">My Exercises</a></li>
+        <li><a href="#">View Past Activity [TK]</a></li>
+      </ul>
+    </div>
+
+  <ul class="view" id="exercise-list"></ul>
+  <script type="template" id="exercise-list-template">
+      <%% exerciseCollection.each(function(exercise) { %>
+        <div class="list">
+          <li><%%= exercise.get('ex_name') %></li>
+          <a href="#exercises/<%%= exercise.get('id')%>">Start Timer</a>
+        </div>
+      <%% }) %>
+  </script>
+
+  <form class="view" id="new-exercise"></form>
+  <script type="template" id="new-exercise-template">
+    <fieldset>
+      <legend>Enter New Exercise</legend>
+        <label>Exercise Name</label>
+          <input id="exercise-name" type="text" name="ex_name">
+        <label>Left And Right Sides?</label>
+          <input id="left-right" type="checkbox" name="two_sides" value=true>
+        <label>Number of Reps</label>
+          <input id="reps" type="integer" name="reps">
+        <label>Image Link</label>
+          <input id="img_url" type="text" name="img_url">
+        <label>Hold Position for... (seconds)</label>
+          <input id="holdtime" type="integer" name="holdtime">
+          <input type="hidden" name="user_id" value="<%= current_user.id %>">
+      <input type="submit" value="Submit">
+    </fieldset>
+  </script>
+
+  <div class="view" id="workout-timer"></div>
+  <script type="template" id="workout-timer-template">
+    <p>This one is called: <%%= model.get('ex_name') %></p>
     <ul>
-      <li><a href="#new-exercise">Add New Exercise</a></li>
-      <li><a href="#exercise-list">My Exercises</a></li>
-      <li><a href="#">View Past Activity [TK]</a></li>
+      <%% if ( model.get('two_sides') === true){ %>
+        <li>Left/Right</li>
+      <%% } %>
+      <li>Number of Reps:<%%= model.get('reps') %></li>
+      <%% if ( model.get('holdtime') > 0 ){ %>
+        <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
+      <%% } %>
+      <li><img class="demo" src="<%%= model.get('img_url') %>"></li>
     </ul>
-  </div>
+  </script>
 
-<ul class="view" id="exercise-list"></ul>
-<script type="template" id="exercise-list-template">
-    <%% exerciseCollection.each(function(exercise) { %>
-      <li><%%= exercise.get('ex_name') %></li>
-      <a href="#exercises/<%%= exercise.get('id')%>">Start Timer</a>
-    <%% }) %>
-</script>
-
-<form class="view" id="new-exercise"></form>
-<script type="template" id="new-exercise-template">
-  <fieldset>
-    <legend>Enter New Exercise</legend>
-      <label>Exercise Name</label>
-        <input id="exercise-name" type="text" name="ex_name">
-      <label>Left And Right Sides?</label>
-        <input id="left-right" type="checkbox" name="two_sides" value=true>
-      <label>Number of Reps</label>
-        <input id="reps" type="integer" name="reps">
-      <label>Image Link</label>
-        <input id="img_url" type="text" name="img_url">
-      <label>Hold Position for... (seconds)</label>
-        <input id="holdtime" type="integer" name="holdtime">
-        <input type="hidden" name="user_id" value="<%= current_user.id %>">
-    <input type="submit" value="Submit">
-  </fieldset>
-</script>
-
-<div class="view" id="workout-timer"></div>
-<script type="template" id="workout-timer-template">
-  <p>This one is called: <%%= model.get('ex_name') %></p>
-  <ul>
-    <%% if ( model.get('two_sides') === true){ %>
-      <li>Left/Right</li>
-    <%% } %>
-    <li>Number of Reps:<%%= model.get('reps') %></li>
-    <%% if ( model.get('holdtime') > 0 ){ %>
-      <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
-    <%% } %>
-    <li><img class="demo" src="<%%= model.get('img_url') %>"></li>
-  </ul>
-</script>
-
-<div class="stuff"></div>
-
+</div>
 

@@ -1,8 +1,9 @@
 <% if signed_in? %>
 
   <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    See the account of <%= link_to current_user.user_name, current_user %>
-    <%= f.submit "Sign out", id: 'signout' %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "My Account", current_user %>
+    <%= f.submit "Sign out", id: 'signout', class: 'signout' %>
   <% end %>
 
 

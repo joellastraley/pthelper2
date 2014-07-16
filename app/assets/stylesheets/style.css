@@ -2,14 +2,61 @@
   background: #000;
 }
 
-.container {
+body {
   font-family: Helvetica;
-  margin: 0 auto;
-  width: 60em;
 }
+
+
+
+.container {
+  margin: 0 auto;
+  width: 40em;
+}
+
+.container h1 {
+  padding-left: 1.2em;
+}
+
 
 .demo {
   width: 20em;
+}
+
+.signout  {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 1.4em;
+}
+
+li {
+  list-style-type: none;
+}
+
+.list li {
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.list a {
+  background-color: #888;
+  color: #fff;
+  padding: 0.2em 0.2em;
+  text-decoration: none;
+
+}
+
+.main {
+  background: url(http://38.media.tumblr.com/tumblr_m5lukozqQm1roql7co1_1280.jpg) no-repeat;
+  padding: 20em 20em;
+}
+
+.main h1 {
+  background-color: rgba(168,168,168, 0.7);
+  border: 1px solid #111;
+  color: #fff;
+  padding: 1em 1em;
 }
 
 .nav {
@@ -25,17 +72,22 @@
 
 .nav li {
   display: inline;
-  list-style-type: none;
 }
 
-#exercise-list {
-  border: 1px solid green;
+.nav-link a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0.2em;
 }
 
-#new-exercise {
-  border: 1px solid yellow;
+.nav-link {
+  background-color: black;
+  padding: 1em 1em;
 }
 
-#workout-picklist {
-  border: 1px solid blue;
+.nav-link button {
+  background-color: blue;
 }
+
+

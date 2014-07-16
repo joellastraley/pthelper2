@@ -6,12 +6,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
 
-  <%= link_to "Home", root_path %>
-  <%= render 'common/signout' %>
+
+  <div class='nav-link'><%= render 'common/signout' %></div>
   <%= yield %>
-  </div>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
 </body>
 </html>
