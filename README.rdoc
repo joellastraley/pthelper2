@@ -1,28 +1,43 @@
-== README
+#PT Helper#
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##GA WDI DC April 2014, Project 3##
 
-Things you may want to cover:
+##Overview##
 
-* Ruby version
+**PT Helper** assists physical therapy patients in tracking exercises assigned to them by their therapists.  The app creates a custom timer for each assigned exercise based off the details entered by a patient.  Once the timer finishes running through a cycle, it log the exercise as having been completed.  This information can be shared with a doctor or therapist to help monitor progress and compliance.
 
-* System dependencies
+See it live here: http://intense-sands-7651.herokuapp.com/
 
-* Configuration
+##Technologies Used##
 
-* Database creation
+-Backbone
+-Ruby 2.1.1
+-Ruby on Rails 4.1.1
+-PostgreSQL Database
+-Authentication & Authorization from scratch using bcrypt-ruby
 
-* Database initialization
+##User Stories Completed##
 
-* How to run the test suite
+-User can create account
+-User can see a list of all assigned exercises
+-User can enter custom exercise instructions in account
+-User can pick a roster of exercises for today
+-Timer displays details of each exercise (timer function TK)
 
-* Services (job queues, cache servers, search engines, etc.)
+##Backlog##
 
-* Deployment instructions
+Features on the horizon include:
+-Functional timer
+-Exercise logger
+-Calendar view for completed exercises
+-Image upload for demo pic
 
-* ...
 
+A full list of user stories can be found at this [Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1119556)
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##ERD##
+
+PT Helper domain model
+
+![ERD](http://www.gliffy.com/go/publish/image/5948726/M.png)
+

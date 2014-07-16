@@ -1,6 +1,5 @@
 console.log("main.js connected");
 
-// $(document).ready(function(){
 
   exerciseCollection = new ExerciseCollection();
   exerciseCollection.fetch().then(function(){
@@ -20,7 +19,7 @@ console.log("main.js connected");
 
   var formView = new FormView({collection: exerciseCollection});
     formView.$el.appendTo("#new-exercise");
-// });
+
 
 
 
