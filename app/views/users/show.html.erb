@@ -41,13 +41,9 @@
   <script type="template" id="workout-timer-template">
     <p>This one is called: <%%= model.get('ex_name') %></p>
     <ul>
-      <%% if ( model.get('two_sides') === true){ %>
-        <li>Left/Right</li>
-      <%% } %>
+      <li>Left/Right</li>
       <li>Number of Reps:<%%= model.get('reps') %></li>
-      <%% if ( model.get('holdtime') > 0 ){ %>
-        <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
-      <%% } %>
+      <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
       <li><img class="demo" src="<%%= model.get('img_url') %>"></li>
     </ul>
   </script>
