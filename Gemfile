@@ -52,4 +52,8 @@ group :development, :test do
   gem 'rails-erd'
 end
 
-ruby "2.1.1"
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
+
+ruby '2.1.1'
