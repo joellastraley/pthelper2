@@ -40,10 +40,11 @@
   <div class="view" id="workout-timer"></div>
   <script type="template" id="workout-timer-template">
     <p>This one is called: <%%= model.get('ex_name') %></p>
+    <button class="start">Start</button>
     <ul>
+    <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
       <li>Left/Right</li>
       <li>Number of Reps:<%%= model.get('reps') %></li>
-      <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
       <li><img class="demo" src="<%%= model.get('img_url') %>"></li>
     </ul>
   </script>
