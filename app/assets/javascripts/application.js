@@ -21,4 +21,5 @@
 //= require ./models/workout.js
 //= require ./views/workout.js
 //= require ./routers/routes.js
+//= require ./views/timer.js
 //= require main.js

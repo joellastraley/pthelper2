@@ -13,6 +13,15 @@ var ExerciseListView = Backbone.View.extend({
   render: function(){
     var rendered = this.template({ exerciseCollection: this.collection });
     this.$el.html('Here are your assigned exercises:' + rendered);
+  },
+
+  events: {
+    'click .destroy': 'onRemove'
+  },
+
+  onRemove: function(){
+    console.log('at delete function');
+    exerciseCollection.this.model.destroy();
   }
 
 });

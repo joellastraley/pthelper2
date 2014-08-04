@@ -1,14 +1,8 @@
 <% if signed_in? %>
-
-  <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    <%= link_to "Home", root_path %>
-    <%= link_to "My Account", current_user %>
-    <%= f.submit "Sign out", id: 'signout', class: 'signout' %>
+  <%= form_for :session, url: signout_path, method: 'delete', class: 'navbar-form' do |f| %>
+    <%= f.submit "Sign out", id: 'signout', class: 'btn btn-default' %>
   <% end %>
-
-
 <% else %>
-
-  <%= link_to "Sign In", signin_path %>  <%= link_to "Sign up", signup_path %>
-
+  <%= link_to "Sign In", signin_path %>
+  <%= link_to "Sign up", signup_path %>
 <% end %>

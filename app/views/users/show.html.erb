@@ -1,19 +1,26 @@
-<div class="container">
-  <h1>PT Helper</h1>
-    <div class="nav" id="nav">
-      <ul>
-        <li><a href="#new-exercise">Add New Exercise</a></li>
-        <li><a href="#exercise-list">My Exercises</a></li>
-        <li><a href="#">View Past Activity [TK]</a></li>
-      </ul>
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a class="navbar-brand" href="#">PT Helper</a></li>
+            <li><a class="active" href="#new-exercise">Add New Exercise</a></li>
+            <li><a href="#exercise-list">My Exercises</a></li>
+            <li><a href="#">View Past Activity [TK]</a></li>
+            <li><a><%= render 'common/signout' %></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
   <ul class="view" id="exercise-list"></ul>
   <script type="template" id="exercise-list-template">
       <%% exerciseCollection.each(function(exercise) { %>
         <div class="list">
-          <li><%%= exercise.get('ex_name') %></li>
-          <a href="#exercises/<%%= exercise.get('id')%>">Start Timer</a>
+          <li><%%= exercise.get('ex_name') %>
+            <a class="btn-primary" href="#exercises/<%%= exercise.get('id')%>">Start Timer</a>
+            <button class="btn-primary destroy">Remove</button>
+          </li>
         </div>
       <%% }) %>
   </script>
@@ -43,8 +50,8 @@
     <button class="start">Start</button>
     <ul>
     <li>Time to Hold:<span class="hold"><%%= model.get('holdtime') %></span></li>
-      <li>Left/Right</li>
-      <li>Number of Reps:<%%= model.get('reps') %></li>
+      <li class="side">Left</li>
+      <li>Number of Reps:<span class="reps"><%%= model.get('reps') %></span></li>
       <li><img class="demo" src="<%%= model.get('img_url') %>"></li>
     </ul>
   </script>

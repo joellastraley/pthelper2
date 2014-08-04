@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     # Test if the user was found AND authenticates
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      redirect_back_or root_url
+      redirect_back_or user_path(user)
     else
       flash[:error] = 'Invalid email/password'
       redirect_to signin_path
