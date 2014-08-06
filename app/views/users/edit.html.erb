@@ -1,12 +1,14 @@
-<h1>Edit <%= @user.user_name %></h1>
-<%= render "user_form" %>
+<div class="container">
+  <h1>Edit <%= @user.user_name %></h1>
+  <%= render "user_form" %>
 
-<hr>
+  <hr>
 
-<%= form_for @user, method: 'delete' do |f| %>
-  <%= f.submit "Delete" %>
-<% end %>
+  <%= form_for @user, method: 'delete' do |f| %>
+    <%= f.submit "Delete" %>
+  <% end %>
 
-<hr>
+  <hr>
 
-<%= link_to "Cancel", @user %>
+  <%= link_to "Cancel", @user %>
+</div>
