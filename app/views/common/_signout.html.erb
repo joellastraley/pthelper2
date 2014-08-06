@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <%= form_for :session, url: signout_path, method: 'delete', class: 'navbar-form' do |f| %>
-    <%= f.submit "Sign out", id: 'signout', class: 'btn btn-default' %>
+    <%= f.submit "Sign out", id: 'signout', class: 'btn-sm' %>
   <% end %>
 <% else %>
   <%= link_to "Sign In", signin_path %>

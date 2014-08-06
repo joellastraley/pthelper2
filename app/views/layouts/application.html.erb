@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>PT Helper</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-
-<div class="container">
-  <%= yield %>
-</div>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
-</body>
+  <head>
+    <title>PT Helper</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+    <body>
+      <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    </body>
 </html>

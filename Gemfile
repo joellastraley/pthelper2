@@ -52,8 +52,16 @@ group :development, :test do
   gem 'rails-erd'
 end
 
-gem "therubyracer"
-gem "less-rails"
-gem 'twitter-bootstrap-rails'
+gem 'autoprefixer-rails'
+
+gem 'bootstrap-sass'
+
+gem 'therubyracer'
+
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails', '~> 3.2.0'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
 
 ruby '2.1.1'

@@ -11,15 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require jquery_serialize_object
 //= require underscore
 //= require backbone
 //= require ./models/exercise.js
-//= require ./views/exercise.js
 //= require ./models/workout.js
+//= require ./models/user.js
+//= require ./views/exercise.js
 //= require ./views/workout.js
-//= require ./routers/routes.js
 //= require ./views/timer.js
+//= require ./routers/routes.js
 //= require main.js

@@ -1,5 +1,3 @@
-console.log("models/exercise.js connected");
-
 var Exercise = Backbone.Model.extend({
   defaults: {
     ex_name: '',
@@ -15,5 +13,7 @@ var ExerciseCollection = Backbone.Collection.extend({
   url: window.location.pathname + '/exercises',
   model: Exercise
 });
+
+
 
 
