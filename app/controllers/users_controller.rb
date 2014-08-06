@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   end
 
   def create
+    user = User.find_by(params[:id])
+
     @user = User.new(user_params)
     if @user.save
       sign_in @user

@@ -40,7 +40,6 @@ var WorkoutTimerView = Backbone.View.extend({
   },
 
   startTimer: function(){
-
    var sec = this.model.get('holdtime');
    var reps = this.model.get('reps');
    var total = reps * 2;
@@ -72,7 +71,6 @@ var WorkoutTimerView = Backbone.View.extend({
                 $exComplete.css('visibility', 'visible');
                 } else {
                   countdown(model = this.model);
-                  console.log("im in the else");
                   }
           }
         }
