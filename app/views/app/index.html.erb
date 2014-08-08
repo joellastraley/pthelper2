@@ -10,7 +10,7 @@
     <%= link_to "Sign up", signup_path, class: "btn btn-large btn-info" %>
 
     <% if signed_in? %>
-      <%= current_user.email %>
+      <%= current_user.id %>
     <% end %>
 
   </div>
