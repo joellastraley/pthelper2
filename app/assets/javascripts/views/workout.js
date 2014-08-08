@@ -15,7 +15,6 @@ var WorkoutTimerView = Backbone.View.extend({
 
   events: {
     'click .start': 'startTimer',
-    'click .pause': 'pauseTimer',
     'submit': 'saveEx',
     'click .destroy': 'onRemove'
   },
@@ -69,6 +68,7 @@ var WorkoutTimerView = Backbone.View.extend({
                 $hold.text(0);
                 alert("You've finished");
                 $exComplete.css('visibility', 'visible');
+                clearTimeout(countdown);
                 } else {
                   countdown(model = this.model);
                   }
@@ -76,10 +76,6 @@ var WorkoutTimerView = Backbone.View.extend({
         }
     }
   countdown(model = this.model);
-  },
-
-  pauseTimer: function(){
-    console.log("pause");
   }
 
 });

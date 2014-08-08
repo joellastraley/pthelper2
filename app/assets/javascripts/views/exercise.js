@@ -21,7 +21,6 @@ var AccountView = Backbone.View.extend({
   template: _.template($('#account-info-template').html()),
 
   initialize: function(){
-    // this.listenTo(this.model, 'change', this.render);
     this.render();
   },
 
@@ -50,16 +49,12 @@ var FormView = Backbone.View.extend({
     "submit": "addExercise"
   },
 
-//Credit: https://www.youtube.com/watch?v=EPYnGFEcis4&feature=youtube_gdata_player
-
-
   addExercise: function(evt){
     evt.preventDefault();
     var two_sides = $('[name="two_sides"]').is(":checked");
     var ex_name = this.$('[name="ex_name"]').val();
     var reps = this.$('[name="reps"]').val();
     var img_url = this.$('[name="img_url"]').val();
-    // var img_url = URL.createObjectURL(img);
     var holdtime = this.$('[name="holdtime"]').val();
     var user_id = this.$('[name="user_id"]').val();
     this.el.reset();
