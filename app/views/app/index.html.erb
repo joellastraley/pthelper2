@@ -9,5 +9,9 @@
     <%= link_to "Sign In", signin_path, class: "btn btn-large btn-info" %>
     <%= link_to "Sign up", signup_path, class: "btn btn-large btn-info" %>
 
+    <% if signed_in? %>
+      <%= current_user.email %>
+    <% end %>
+
   </div>
 </div>

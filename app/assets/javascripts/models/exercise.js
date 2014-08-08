@@ -4,7 +4,7 @@ var Exercise = Backbone.Model.extend({
     two_sides: false,
     reps: 0,
     img_url: '',
-    holdtime: 0,
+    holdtime:0,
     user_id: ''
   }
 });
